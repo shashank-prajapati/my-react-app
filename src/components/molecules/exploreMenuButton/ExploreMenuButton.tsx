@@ -1,0 +1,28 @@
+import React from 'react';
+import ExploreMenuIcons from '../../atoms/exploreMenuIcons/ExploreMenuIcons';
+import {ReactComponent as EntrepreneurshipIcon} from '../../../media/Vector.svg';
+import { Box, Typography } from '@mui/material';
+
+type Props = {
+    iconComponent:React.ElementType<any>;
+    buttonText:string;
+};
+
+function ExploreMenuButton(props: Props) {
+  const {iconComponent,buttonText} = props;
+  return <Box sx={{
+      display:'flex',
+      alignItems:'center',
+      '&:hover *':{
+        cursor: 'pointer',
+        color:'secondary.main'
+      },
+      '&:hover':{
+        cursor: 'pointer',
+      }}}>
+      <ExploreMenuIcons iconComponent={iconComponent}/>
+      <Typography variant='body2' color='extraTextColor.main' sx={{ml:1}}>{buttonText}</Typography>
+  </Box>;
+}
+
+export default ExploreMenuButton;

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "CeraPro";
+  src: url("./assets/fonts/Cera\ Pro\ Medium.otf") format("opentype");
+}
+
+body {
+  font-family: "CeraPro";
+}

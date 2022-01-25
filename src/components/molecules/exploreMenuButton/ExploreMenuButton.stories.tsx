@@ -1,0 +1,12 @@
+import React from 'react';
+
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import {ReactComponent as EntrepreneurshipIcon} from '../../../media/Vector.svg';
+import ExploreMenuButton from './ExploreMenuButton';
+
+export default {
+  title: 'atoms/Explore Menu Buttons',
+  component: ExploreMenuButton,
+} as ComponentMeta<typeof ExploreMenuButton>;
+
+export const Primary: ComponentStory<typeof ExploreMenuButton> = () => <ExploreMenuButton iconComponent={EntrepreneurshipIcon} buttonText='Entrepreneurship'/>;
