@@ -1,6 +1,13 @@
 @font-face {
   font-family: "CeraPro";
-  src: url("./assets/fonts/Cera\ Pro\ Medium.otf") format("opentype");
+  src: url(./assets/fonts/Cera\ Pro\ Light.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "CeraPro";
+  src: url(./assets/fonts/Cera\ Pro\ Medium.otf);
+  font-weight: bold;
 }
 
 body {

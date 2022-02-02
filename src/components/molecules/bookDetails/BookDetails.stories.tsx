@@ -11,10 +11,20 @@ export default {
 
 const Template : ComponentStory<typeof BookDetails> = (args)=> <BookDetails {...args}></BookDetails>
 
-export const Primary = Template.bind({});
+export const NotButtoned = Template.bind({});
+export const Buttoned = Template.bind({});
 
-Primary.args = {
+NotButtoned.args = {
     time:'13',
     bookAuthor:'Jim Collins & Bill Lazier',
-    bookTitle:'Beyond Entrepreneurship'
+    bookTitle:'Beyond Entrepreneurship',
+    isButtoned:false
+}
+
+Buttoned.args= {
+  time:'13',
+  bookAuthor:'Jim Collins & Bill Lazier',
+  bookTitle:'Beyond Entrepreneurship',
+  isButtoned:true,
+  btnText:'Finished',
 }

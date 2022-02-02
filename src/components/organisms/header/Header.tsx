@@ -8,19 +8,21 @@ import MyLibraryButton from '../../atoms/myLibraryButton/MyLibraryButton';
 import Popover from '@mui/material/Popover';
 import ExploreMenu from '../exploreMenu/ExploreMenu';
 import { red } from '@mui/material/colors';
+import Modal from '@mui/material/Modal';
+import { useNavigate } from "react-router-dom";
 
-type Props = {};
 
-function Header({}: Props) {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+type Props = {
+  btnClick?:React.MouseEventHandler<HTMLButtonElement>;
+  btnIcon?:React.ReactNode;
+};
 
-  const open = Boolean(anchorEl);
-
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
+function Header(props: Props) {
+  const {btnClick,btnIcon} = props;
+  const navigate = useNavigate();
+  const gotoMyLibrary = ()=>{
+    navigate('/');
   };
-
-  const handleClose = ()=>setAnchorEl(null);
 
   return <div>
   <Box sx={{
@@ -37,8 +39,8 @@ function Header({}: Props) {
       }}>
         <BlinkistHeaderLogo height='26px' width='124px'/>
         <SearchButton sx={{ml:10}}/>
-        <ExploreButton sx={{ml:10}} onClick={handleClick}/>
-        <MyLibraryButton sx={{ml:10}}/>
+        <ExploreButton sx={{ml:10}} onClick={btnClick} endIcon={btnIcon}/>
+        <MyLibraryButton sx={{ml:10}} onClick={gotoMyLibrary}/>
       </Box >
       <Box sx={{
           display:'flex',
@@ -46,20 +48,6 @@ function Header({}: Props) {
         <AvatarButton/>
       </Box>
       </Box>
-      <Popover
-        anchorReference="anchorPosition"
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
-        anchorPosition={{ top: 100, left:0}}
-      >
-        <ExploreMenu/>
-      </Popover>
       </div>;
 }
 

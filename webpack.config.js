@@ -1,4 +1,7 @@
 const webpack = require('webpack');
+const path = require('path');
+
+const srcPath = path.join(__dirname, '..', 'publicfolder')
 
 module.exports = {
   entry: './src/index.js',
@@ -7,7 +10,7 @@ module.exports = {
         {
             test: /\.svg$/,
             use: ['@svgr/webpack'],
-        }
+        },
     ],
   },
 };

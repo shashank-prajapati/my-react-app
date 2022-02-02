@@ -1,19 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Typography from "@mui/material/Typography";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import {theme} from '../src/themes/themes';
-import Header from './components/organisms/header/Header';
-import ExploreMenuIcons from './components/atoms/exploreMenuIcons/ExploreMenuIcons';
-import ExploreMenu from './components/organisms/exploreMenu/ExploreMenu';
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
+import LandingPage from './components/pages/landingPage/LandingPage';
+import EntrepreneurshipBooks from './components/pages/entrepreneurshipBooks/EntrepreneurshipBooks';
+import Header from '../src/components/organisms/header/Header'
+import BookDetailsPage from './components/pages/bookDetails/BookDetailsPage';
 
 function App() {
   return (
-    <div>
-      <Header/>
-    </div>
+    <Router>
+    <Routes>
+        <Route path='/' element={<LandingPage/>} />
+        <Route path='/explore-books/:category' element={<EntrepreneurshipBooks/>} />
+        <Route path='/book/beyond-entrepreneurship-2.0' element={<BookDetailsPage/>}/>
+    </Routes>
+    </Router>
   );
 }
 

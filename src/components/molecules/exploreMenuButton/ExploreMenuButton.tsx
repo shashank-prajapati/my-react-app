@@ -6,11 +6,13 @@ import { Box, Typography } from '@mui/material';
 type Props = {
     iconComponent:React.ElementType<any>;
     buttonText:string;
+    onClick?:React.MouseEventHandler<HTMLDivElement>
 };
 
 function ExploreMenuButton(props: Props) {
-  const {iconComponent,buttonText} = props;
-  return <Box sx={{
+  const {iconComponent,buttonText,onClick} = props;
+  return <div onClick={onClick}>
+    <Box sx={{
       display:'flex',
       alignItems:'center',
       '&:hover *':{
@@ -22,7 +24,8 @@ function ExploreMenuButton(props: Props) {
       }}}>
       <ExploreMenuIcons iconComponent={iconComponent}/>
       <Typography variant='body2' color='extraTextColor.main' sx={{ml:1}}>{buttonText}</Typography>
-  </Box>;
+  </Box>
+  </div>;
 }
 
 export default ExploreMenuButton;

@@ -1,13 +1,20 @@
-import React from 'react';
+import React from "react";
 
 type Props = {
-  source:string;
+  source: string;
+  width?: string | number | undefined
 };
 
 function BookImage(props: Props) {
-  const{source} = props;
+  const { source,width } = props;
   return (
-      <img style={{display:'block'}} src={source} width='284px' height="287px" alt='Book Cover'></img>);
+    <img
+      style={{ display: "block" }}
+      src={source}
+      width={width}
+      alt="Book Cover"
+    ></img>
+  );
 }
 
 export default BookImage;

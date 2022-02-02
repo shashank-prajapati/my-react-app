@@ -1,0 +1,61 @@
+import { Box, Grid } from "@mui/material";
+import React from "react";
+import BookCard from "../../molecules/bookCard/BookCard";
+import AddIcon from "@mui/icons-material/Add";
+import { useNavigate } from "react-router-dom";
+
+type bookProps = {
+  id: number;
+  coverImage: string;
+  bookTitle: string;
+  bookAuthor: string;
+  time: string;
+};
+
+type Props = {
+  gridData: Array<bookProps>;
+};
+
+
+function AddBookGrid(props: Props) {
+  const { gridData } = props;
+
+  const navigate = useNavigate();
+  const handleClick = ()=>{
+    let path = "/book/beyond-entrepreneurship-2.0";
+    navigate(path);
+  }
+
+  const gridItems = gridData.map((book) => (
+    <Grid item>
+      <BookCard
+        key={book.id}
+        coverImage={book.coverImage}
+        bookTitle={book.bookTitle}
+        bookAuthor={book.bookAuthor}
+        time={book.time}
+        isButtoned={true}
+        btnText="Add to library"
+        startIcon={<AddIcon />}
+        handleClick={handleClick}
+        index={book.id}
+      />
+    </Grid>
+  ));
+
+  return (
+    <div>
+      <Grid
+        container
+        justifyContent={"space-between"}
+        width="100%"
+        spacing={0}
+        rowSpacing={6}
+      >
+        {gridItems}
+      </Grid>
+    </div>
+  );
+}
+
+export default AddBookGrid;
