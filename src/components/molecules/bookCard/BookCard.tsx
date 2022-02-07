@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Card from "@mui/material/Card";
-import BookImage from "../../atoms/bookImage/BookImage";
 import BookDetails from "../bookDetails/BookDetails";
 import { ButtonProps } from "@mui/material";
 import Box from "@mui/material/Box";
+import Image from "../../atoms/image/Image";
 
 interface Props extends ButtonProps {
   coverImage: string;
@@ -33,21 +33,21 @@ function BookCard(props: Props) {
   if (!isButtoned) {
     paddingBottom = 4;
   }
-  
+
   return (
     <div>
       <Card
         sx={{
-          maxWidth: "284px",
-          backgroundColor: "formBg.main",
+          width: "19.7vw",
+          backgroundColor: "secondary_100.main",
           borderRadius: "8px",
           pb: paddingBottom,
         }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        onClick={() => handleClick && handleClick(index-1)}
+        onClick={() => handleClick && handleClick(index - 1)}
       >
-        <BookImage source={coverImage} />
+        <Image source={coverImage} imgWidth="100%" imgHeight="100%" />
         <BookDetails
           bookTitle={bookTitle}
           bookAuthor={bookAuthor}

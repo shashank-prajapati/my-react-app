@@ -4,7 +4,7 @@ import BookCard from "../../molecules/bookCard/BookCard";
 import AddIcon from "@mui/icons-material/Add";
 import { useNavigate } from "react-router-dom";
 
-type bookProps = {
+export type bookProps = {
   id: number;
   coverImage: string;
   bookTitle: string;
@@ -30,7 +30,7 @@ function AddBookGrid(props: Props) {
     <Grid item>
       <BookCard
         key={book.id}
-        coverImage={book.coverImage}
+        coverImage={`${process.env.PUBLIC_URL}/assets/cover_image/${book.coverImage}`}
         bookTitle={book.bookTitle}
         bookAuthor={book.bookAuthor}
         time={book.time}

@@ -1,34 +1,37 @@
-import { Button, ButtonProps } from '@mui/material';
-import React from 'react';
+import { Button, ButtonProps } from "@mui/material";
+import React from "react";
+import ButtonAtom from "../button/ButtonAtom";
+import ButtonAton from "../button/ButtonAtom";
 
-interface Props extends ButtonProps{
-    btnText?:string;
-    isHovered:Boolean;
+interface Props extends ButtonProps {
+  btnText?: string;
+  isHovered?: Boolean;
 }
 
-const BookCardButton = (props: Props)=> {
-  const {btnText,startIcon,isHovered} = props;
-  let backgroundColor = 'white';
-  let textColor = 'secondary.main';
-  if(isHovered){
-      backgroundColor = 'secondary.main';
-      textColor = 'white'
+const BookCardButton = (props: Props) => {
+  const { btnText, startIcon, isHovered } = props;
+  let backgroundColor = "white";
+  let textColor = "secondary.main";
+  if (isHovered) {
+    backgroundColor = "secondary.main";
+    textColor = "white";
   }
-  return <div>
-      <Button variant="contained" sx={{
-          width:'100%',
-          color:textColor,
-          textTransform:'none',
-          bgcolor:backgroundColor,
-          '&:hover':{
-              color:'white',
-              bgcolor:'secondary.main'
-          },
-          fontWeight:'bold'
-      }}
-      startIcon={startIcon}
-      size='large'>{btnText}</Button>
-  </div>;
-}
+  return (
+    <div>
+      <ButtonAtom
+        variant="contained"
+        width="100%"
+        textColor={textColor}
+        backgroundColor={backgroundColor}
+        hoverTextColor="white"
+        hoverBackGroundColor="secondary.main"
+        startIcon={startIcon}
+        size="large"
+      >
+        {btnText}
+      </ButtonAtom>
+    </div>
+  );
+};
 
 export default BookCardButton;

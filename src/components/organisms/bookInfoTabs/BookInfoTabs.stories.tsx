@@ -5,8 +5,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import BookInfoTabs from './BookInfoTabs';
 
 export default {
-  title: 'atoms/Search Button',
+  title: 'organisms/Book Info Tabs',
   component: BookInfoTabs,
 } as ComponentMeta<typeof BookInfoTabs>;
 
-export const Primary: ComponentStory<typeof BookInfoTabs> = () => <BookInfoTabs/>;
+export const TabLayout: ComponentStory<typeof BookInfoTabs> = () => <BookInfoTabs/>;

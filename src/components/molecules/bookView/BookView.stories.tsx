@@ -21,5 +21,5 @@ BeyondEntrepreneurship.args = {
   bookAuthor: "Jim Collins & Bill Lazier",
   bookTitle: "Beyond Entrepreneurship",
   bookDesc: "Turning Your Business into an Enduring Great Company",
-  source:BookImage
+  coverImage:BookImage
 };

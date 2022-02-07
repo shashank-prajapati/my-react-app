@@ -13,7 +13,7 @@ function a11yProps(index: number) {
   };
 }
 
-interface bookData {
+export interface bookData {
   id: number;
   coverImage: string;
   bookTitle: string;

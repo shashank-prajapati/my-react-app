@@ -1,22 +1,50 @@
 import { Box, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BookView from "../../molecules/bookView/BookView";
 import BookImage from "../../../media/coverImage.png";
 import HeaderWithBackDrop from "../../organisms/headerWithBackdrop/HeaderWithBackDrop";
 import BookInfoTabs from "../../organisms/bookInfoTabs/BookInfoTabs";
 import Footer from "../../molecules/footer/Footer";
-
-type Props = {};
+import { bookProps } from "../../molecules/bookView/BookView";
 
 const bookDetails = {
-  time: "13",
-  bookAuthor: "Jim Collins & Bill Lazier",
-  bookTitle: "Beyond Entrepreneurship",
-  bookDesc: "Turning Your Business into an Enduring Great Company",
-  source: BookImage,
+  bookTitle: "",
+  bookDesc: "",
+  bookAuthor: "",
+  time: "",
+  coverImage: "",
 };
 
-const BookDetailsPage = ({}: Props) => {
+const BookDetailsPage = () => {
+  const [data, setData] = useState<bookProps>(bookDetails);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/trendingBlinkz/2")
+      .then((response) => response.json())
+      .then((json) => {
+        setData(json);
+        console.log(json);
+      });
+  }, []);
+
+  const addBook = () => {
+    fetch("http://localhost:3000/myLibrary", {
+      method: "POST",
+      body: JSON.stringify({
+        coverImage: "Entrepreneurship.png",
+        bookTitle: "Beyond Entrepreneurship",
+        bookAuthor: "Jim Collins & Bill Lazier",
+        time: "13",
+        isFinished: true,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+  };
+
   return (
     <div>
       <HeaderWithBackDrop>
@@ -25,16 +53,17 @@ const BookDetailsPage = ({}: Props) => {
             Get the key ideas from
           </Typography>
           <BookView
-            bookTitle={bookDetails.bookAuthor}
-            bookAuthor={bookDetails.bookAuthor}
-            bookDesc={bookDetails.bookDesc}
-            time={bookDetails.time}
-            source={bookDetails.source}
+            bookTitle={data.bookAuthor}
+            bookAuthor={data.bookAuthor}
+            bookDesc={data.bookDesc}
+            time={data.time}
+            coverImage={data.coverImage}
+            onClick={addBook}
           />
           <BookInfoTabs />
         </Box>
+        <Footer />
       </HeaderWithBackDrop>
-      <Footer />
     </div>
   );
 };

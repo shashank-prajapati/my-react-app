@@ -6,7 +6,7 @@ import {theme} from '../../../themes/themes'
 type Props = {};
 
 function MoreHorizontal({}: Props) {
-  return <MoreHorizIcon sx={{fill:theme.palette.iconsColor.main, diplay:'block'}} width="18px" height="4px"/>;
+  return <MoreHorizIcon sx={{fill:theme.palette.grey_700.main, diplay:'block'}} width="18px" height="4px"/>;
 }
 
 export default MoreHorizontal;

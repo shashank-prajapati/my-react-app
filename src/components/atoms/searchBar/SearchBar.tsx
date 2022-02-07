@@ -20,8 +20,9 @@ const SearchBar = ({}: Props) => {
           ".MuiInput-root:before,.MuiInput-root:after,.MuiInput-root:hover,.MuiInput-root:hover:not(.Mui-disabled):before":
             {
               borderColor: "extraTextColor.main",
-              borderWidth: 4,
+              borderWidth: 2,
             },
+          width: "63%",
         }}
         InputProps={{
           startAdornment: (

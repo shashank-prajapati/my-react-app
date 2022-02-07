@@ -1,19 +1,19 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography, ButtonProps } from "@mui/material";
 import React from "react";
-import BookImage from "../../atoms/bookImage/BookImage";
 import TimeLeft from "../timeLeft/TimeLeft";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Image from "../../atoms/image/Image";
 
-type Props = {
+export interface bookProps extends ButtonProps {
   bookTitle: string;
   bookDesc: string;
   bookAuthor: string;
   time: string;
-  source: string;
+  coverImage: string;
 };
 
-const BookView = (props: Props) => {
-  const { bookTitle, bookDesc, bookAuthor, time, source } = props;
+const BookView = (props: bookProps) => {
+  const { bookTitle, bookDesc, bookAuthor, time, coverImage, onClick } = props;
   return (
     <Box display="flex" flexDirection="row" justifyContent="space-between">
       <Box flexDirection="column">
@@ -57,6 +57,7 @@ const BookView = (props: Props) => {
               mr: 6,
               fontWeight:'bold'
             }}
+            onClick={onClick}
           >
             Finished Reading
           </Button>
@@ -76,7 +77,7 @@ const BookView = (props: Props) => {
       </Box>
       <Box>
         <Box>
-          <BookImage source={source} width="302px" />
+          <Image source={`${process.env.PUBLIC_URL}/assets/cover_image/${coverImage}`} imgWidth="302px" imgHeight="302px" />
         </Box>
       </Box>
     </Box>

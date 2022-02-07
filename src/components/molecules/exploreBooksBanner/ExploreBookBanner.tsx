@@ -1,6 +1,8 @@
 import { Grid, Paper, Typography } from '@mui/material';
 import React from 'react';
-import ReadingImage from '../../atoms/readingImage/ReadingImage';
+import Image from '../../atoms/image/Image';
+import ReadingImg from "../../../media/readingImage.png";
+
 
 type Props = {};
 
@@ -25,7 +27,7 @@ const ExploreBookBanner = ({}: Props)=> {
             display:'flex',
             justifyContent:'center'
         }}>
-            <ReadingImage/>
+            <Image source={ReadingImg}/>
         </Grid>
       </Grid>
   </Paper>;

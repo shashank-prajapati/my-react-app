@@ -25,10 +25,10 @@ function BookGrid(props: Props) {
       buttonText = "Read Again";
     }
     return (
-      <Grid item xs={4} display='flex' justifyContent='center'>
+      <Grid item xs={4} display="flex" justifyContent="center">
         <BookCard
           key={book.id}
-          coverImage={book.coverImage}
+          coverImage={`${process.env.PUBLIC_URL}/assets/cover_image/${book.coverImage}`}
           bookTitle={book.bookTitle}
           bookAuthor={book.bookAuthor}
           time={book.time}
@@ -43,7 +43,7 @@ function BookGrid(props: Props) {
 
   return (
     <div>
-      <Grid container columnSpacing={10} rowGap={4}>
+      <Grid container columnSpacing={"3vw"} rowGap={4}>
         {booksGridItems}
       </Grid>
     </div>

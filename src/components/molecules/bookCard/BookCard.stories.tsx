@@ -3,7 +3,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import coverImage from "../../../media/coverImage.png";
-import icon from "../../../../public/assets/Vector.svg";
+import EBFBCoverImage from "../../../../public/assets/cover_image/EBFB.png"
 import AddIcon from "@mui/icons-material/Add";
 
 import BookCard from "./BookCard";
@@ -22,7 +22,7 @@ export const Buttoned = Template.bind({});
 export const ButtonedWithIcon = Template.bind({});
 
 unButtoned.args = {
-  coverImage: coverImage,
+  coverImage: EBFBCoverImage,
   time: "13",
   bookAuthor: "Jim Collins & Bill Lazier",
   bookTitle: "Beyond Entrepreneurship",

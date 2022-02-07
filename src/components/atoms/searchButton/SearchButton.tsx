@@ -2,6 +2,7 @@ import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import IconButton from '@mui/material/IconButton';
 import { BoxProps } from '@mui/material/Box';
+import ButtonAtom from '../button/ButtonAtom';
 
 interface Props extends BoxProps{
 
