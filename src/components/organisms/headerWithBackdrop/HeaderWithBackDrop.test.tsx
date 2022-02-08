@@ -7,4 +7,10 @@ describe("Testing Header with back drop", () => {
     const { container } = render(<HeaderWithBackDrop />);
     expect(container).toMatchSnapshot();
   });
+
+  it("should open the dropdown", () => {
+    const { container } = render(<HeaderWithBackDrop />);
+    fireEvent.click(screen.getByText('Explore'));
+    expect(screen.getByText("Entrepreneurship")).toBeInTheDocument();
+  });
 });

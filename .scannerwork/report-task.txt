@@ -1,0 +1,8 @@
+organization=shashank-prajapati
+projectKey=shashank-prajapati_my-react-app
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.26632
+branch=myBranch
+dashboardUrl=https://sonarcloud.io/dashboard?id=shashank-prajapati_my-react-app&branch=myBranch&resolved=false
+ceTaskId=AX7ZJyQ_xwhWxVnNW38S
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AX7ZJyQ_xwhWxVnNW38S
