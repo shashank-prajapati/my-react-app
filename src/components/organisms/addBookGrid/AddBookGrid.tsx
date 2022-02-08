@@ -14,17 +14,12 @@ export type bookProps = {
 
 type Props = {
   gridData: Array<bookProps>;
+  handleClick?:any;
 };
 
 
 function AddBookGrid(props: Props) {
-  const { gridData } = props;
-
-  const navigate = useNavigate();
-  const handleClick = ()=>{
-    let path = "/book/beyond-entrepreneurship-2.0";
-    navigate(path);
-  }
+  const { gridData ,handleClick} = props;
 
   const gridItems = gridData.map((book) => (
     <Grid item>

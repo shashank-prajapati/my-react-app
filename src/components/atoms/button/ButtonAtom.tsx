@@ -1,6 +1,5 @@
 import React from "react";
 import Button, { ButtonProps } from "@mui/material/Button";
-
 interface Props extends ButtonProps {
   textColor?:string;
   backgroundColor?:string;
@@ -11,7 +10,6 @@ interface Props extends ButtonProps {
   borderRadius?:string|number;
   ml?:string|number;
 }
-
 const ButtonAtom = (props: Props) => {
   const {textColor,backgroundColor,hoverTextColor,hoverBackGroundColor, children,width,hoverBottomBorder,borderRadius,ml,...rest } = props;
   return (
@@ -32,5 +30,4 @@ const ButtonAtom = (props: Props) => {
     >{children}</Button>
   );
 };
-
 export default ButtonAtom;

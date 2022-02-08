@@ -111,7 +111,7 @@ describe("Testing Book Grid", () => {
         cardButtonClick={handleClick}
       ></BookGrid>
     );
-    fireEvent.click(screen.getByText("Finish Reading"));
+    fireEvent.click(screen.getAllByText("Finish Reading")[0]);
     expect(handleClick).toHaveBeenCalled();
   });
 
@@ -123,7 +123,7 @@ describe("Testing Book Grid", () => {
         cardButtonClick={handleClick}
       ></BookGrid>
     );
-    fireEvent.click(screen.getByText("Read Again"));
+    fireEvent.click(screen.getAllByText("Read Again")[0]);
     expect(handleClick).toHaveBeenCalled();
   });
 });

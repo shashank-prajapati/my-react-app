@@ -2,9 +2,10 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import TimeLeft from "../timeLeft/TimeLeft";
-import MoreHorizontal from "../../atoms/moreHorizontal/MoreHorizontal";
+import { ReactComponent as HorizontalMenu } from "../../../media/horizontalMenu.svg";
 import BookCardButton from "../../atoms/bookCardButton/BookCardButton";
 import { ButtonProps } from "@mui/material";
+import Icon from "../../atoms/icon/Icon";
 
 interface Props extends ButtonProps {
   time: string;
@@ -64,7 +65,9 @@ function BookDetails(props: Props) {
               justifyContent: "flex-end",
             }}
           >
-            {!isButtoned && <MoreHorizontal />}
+            {!isButtoned && (
+              <Icon iconComponent={HorizontalMenu} width="18px" height="4px" />
+            )}
           </Box>
         </Box>
         {isButtoned && (

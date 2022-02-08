@@ -6,6 +6,7 @@ import HeaderWithBackDrop from "../../organisms/headerWithBackdrop/HeaderWithBac
 import BookInfoTabs from "../../organisms/bookInfoTabs/BookInfoTabs";
 import Footer from "../../molecules/footer/Footer";
 import { bookProps } from "../../molecules/bookView/BookView";
+import { useNavigate } from "react-router-dom";
 
 const bookDetails = {
   bookTitle: "",
@@ -17,6 +18,16 @@ const bookDetails = {
 
 const BookDetailsPage = () => {
   const [data, setData] = useState<bookProps>(bookDetails);
+
+  const navigate = useNavigate();
+  const openPage = (catName:string) => {
+    let path = "/explore-books/"+catName;
+    navigate(path);
+  };
+
+  const gotoMyLibrary = () => {
+    navigate("/");
+  };
 
   useEffect(() => {
     fetch("http://localhost:3000/trendingBlinkz/2")
@@ -47,7 +58,7 @@ const BookDetailsPage = () => {
 
   return (
     <div>
-      <HeaderWithBackDrop>
+      <HeaderWithBackDrop onExploreMenuClick={openPage} gotoMyLibrary={gotoMyLibrary}>
         <Box sx={{ px: 62.5 }}>
           <Typography pb={10} variant="body2" color="navTextColors.main">
             Get the key ideas from

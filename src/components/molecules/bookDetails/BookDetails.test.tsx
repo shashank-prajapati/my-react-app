@@ -3,7 +3,7 @@ import { render, fireEvent } from "@testing-library/react";
 import BookDetails from "./BookDetails";
 import { Typography } from "@mui/material";
 
-describe("Testing ImageAtom", () => {
+describe("Testing Book Details Molecule", () => {
   it("should match the unButtoned BookDetails snapshot", () => {
     const { container } = render(
       <BookDetails

@@ -15,4 +15,4 @@ const Template: ComponentStory<typeof AvatarButton> = (args) => (
   <AvatarButton {...args} />
 );
 
-export const Primary = Template.bind({});
+export const Primary: ComponentStory<typeof AvatarButton>  = Template.bind({});

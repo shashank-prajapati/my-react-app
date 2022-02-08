@@ -1,23 +1,36 @@
 import React, { useState } from "react";
 import BlinkistLogo from "../../../media/blinkistLogo.png";
 import Box, { BoxProps } from "@mui/material/Box";
-import SearchButton from "../../atoms/searchButton/SearchButton";
+import IconButton from "../../atoms/iconButton/IconButton";
 import AvatarButton from "../../molecules/avatarButton/AvatarButton";
-import { useNavigate } from "react-router-dom";
 import Image from "../../atoms/image/Image";
 import ButtonAtom from "../../atoms/button/ButtonAtom";
 import { theme } from "../../../themes/themes";
+import { useAuth0 } from "@auth0/auth0-react";
+import { Menu, MenuItem } from "@mui/material";
+import { ReactComponent as SearchIcon } from "../../../media/searchIcon.svg";
 
 type Props = {
   btnClick?: React.MouseEventHandler<HTMLButtonElement>;
   btnIcon?: React.ReactNode;
+  gotoMyLibrary?: any;
 };
 
 function Header(props: Props) {
-  const { btnClick, btnIcon } = props;
-  const navigate = useNavigate();
-  const gotoMyLibrary = () => {
-    navigate("/");
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const { btnClick, btnIcon, gotoMyLibrary } = props;
+  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
+
+  const logoutBtnClick = () => {
+    handleClose();
+    logout({ returnTo: window.location.origin });
   };
 
   return (
@@ -39,14 +52,14 @@ function Header(props: Props) {
           }}
         >
           <Image source={BlinkistLogo} imgHeight="26px" imgWidth="124px" />
-          <SearchButton sx={{ ml: 10 }} />
+          <IconButton iconComponent={SearchIcon} sx={{ ml: 10 }} />
           <ButtonAtom
             ml={10}
             onClick={btnClick}
             endIcon={btnIcon}
             borderRadius={0}
             hoverBottomBorder={`1px solid ${theme.palette.primary.main}`}
-            color="navTextColors"
+            textColor="navTextColors.main"
             variant="text"
             hoverBackGroundColor="white"
           >
@@ -54,9 +67,9 @@ function Header(props: Props) {
           </ButtonAtom>
           <ButtonAtom
             variant="text"
-            color="navTextColors"
+            textColor="navTextColors.main"
             size="medium"
-            onClick={gotoMyLibrary}
+            onClick={() => gotoMyLibrary()}
             ml={10}
           >
             My Library
@@ -68,7 +81,43 @@ function Header(props: Props) {
             alignItems: "center",
           }}
         >
-          <AvatarButton />
+          {!isAuthenticated && (
+            <ButtonAtom
+              variant="text"
+              textColor="navTextColors.main"
+              onClick={() => loginWithRedirect()}
+            >
+              Signin
+            </ButtonAtom>
+          )}
+
+          {isAuthenticated && (
+            <AvatarButton
+              data-testid="account-Btn"
+              onClick={handleClick}
+              isAuthenticated={isAuthenticated}
+              userName={user && user.email}
+            />
+          )}
+          <Menu
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "right",
+            }}
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+            id="basic-menu"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            MenuListProps={{
+              "aria-labelledby": "basic-button",
+            }}
+          >
+            <MenuItem onClick={logoutBtnClick}>Logout</MenuItem>
+          </Menu>
         </Box>
       </Box>
     </div>

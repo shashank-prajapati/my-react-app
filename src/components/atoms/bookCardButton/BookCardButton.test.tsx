@@ -2,22 +2,15 @@ import * as React from "react";
 import { render, fireEvent ,screen} from "@testing-library/react";
 import BookCardButton from "./BookCardButton";
 
-describe("Testing Account Avatar", () => {
+describe("Testing Book Card Button", () => {
   it("should match the default snapshot", () => {
     const { container } = render(<BookCardButton btnText="Add to library" />);
     expect(container).toMatchSnapshot();
   });
 
-  it('should call on click method of button', () => {
-    const handleClick = jest.fn();
-    const { container } = render(
-      <BookCardButton
-        btnText="Add to library"
-        onClick={handleClick}
-      />,
-    );
-    fireEvent.click(screen.getByText('Add User Group'));
-    expect(handleClick).toHaveBeenCalled();
+  it("should match the dhover snapshot", () => {
+    const { container } = render(<BookCardButton btnText="Add to library" isHovered={true}/>);
+    expect(container).toMatchSnapshot();
   });
 });
 

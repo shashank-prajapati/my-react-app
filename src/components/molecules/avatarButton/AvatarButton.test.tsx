@@ -6,7 +6,7 @@ import { Typography } from '@mui/material';
 
 describe('Testing ImageAtom', ()=>{
     it('should match the default snapshot',()=>{
-        const {container} = render(<AvatarButton/>,);
+        const {container} = render(<AvatarButton isAuthenticated={true}/>,);
         expect(container).toMatchSnapshot();
     })
 })

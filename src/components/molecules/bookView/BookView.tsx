@@ -3,14 +3,16 @@ import React from "react";
 import TimeLeft from "../timeLeft/TimeLeft";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Image from "../../atoms/image/Image";
+import ButtonAtom from "../../atoms/button/ButtonAtom";
 
-export interface bookProps extends ButtonProps {
+export interface bookProps {
   bookTitle: string;
   bookDesc: string;
   bookAuthor: string;
   time: string;
   coverImage: string;
-};
+  onClick?: any;
+}
 
 const BookView = (props: bookProps) => {
   const { bookTitle, bookDesc, bookAuthor, time, coverImage, onClick } = props;
@@ -36,48 +38,46 @@ const BookView = (props: bookProps) => {
           <TimeLeft time={time}></TimeLeft>
         </Box>
         <Box flexDirection="row" justifyContent="space-between" width="100%">
-          <Button
+          <ButtonAtom
             variant="outlined"
+            textColor="primary.main"
             sx={{
               borderColor: "navTextColors.main",
-              color: "primary.main",
-              textTransform: "none",
               mr: 6,
-              fontWeight:'bold'
             }}
           >
             Read Now
-          </Button>
-          <Button
+          </ButtonAtom>
+          <ButtonAtom
             variant="contained"
+            textColor="navTextColors.main"
+            backgroundColor="primary.main"
             sx={{
-              bgcolor: "primary.main",
-              color: "navTextColors.main",
-              textTransform: "none",
               mr: 6,
-              fontWeight:'bold'
             }}
-            onClick={onClick}
+            onClick={() => onClick()}
           >
             Finished Reading
-          </Button>
-          <Button
+          </ButtonAtom>
+          <ButtonAtom
             sx={{
-              textTransform: "none",
               mr: 6,
-              fontWeight:'bold'
             }}
             variant="text"
-            color="extraTextColor"
+            textColor="extraTextColor.main"
             endIcon={<ArrowForwardIcon sx={{ color: "extraTextColor.main" }} />}
           >
             Send To Kindle
-          </Button>
+          </ButtonAtom>
         </Box>
       </Box>
       <Box>
         <Box>
-          <Image source={`${process.env.PUBLIC_URL}/assets/cover_image/${coverImage}`} imgWidth="302px" imgHeight="302px" />
+          <Image
+            source={`${process.env.PUBLIC_URL}/assets/cover_image/${coverImage}`}
+            imgWidth="302px"
+            imgHeight="302px"
+          />
         </Box>
       </Box>
     </Box>

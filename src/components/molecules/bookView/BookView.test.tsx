@@ -1,5 +1,5 @@
 import * as React from "react";
-import { render, fireEvent ,screen} from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import BookView from "./BookView";
 import { Typography } from "@mui/material";
 import BookImage from "../../../media/coverImage.png";
@@ -12,7 +12,7 @@ describe("Testing Book View Molecule", () => {
         bookAuthor={"Jim Collins & Bill Lazier"}
         bookTitle="Beyond Entrepreneurship"
         bookDesc="Turning Your Business into an Enduring Great Company"
-        coverImage={BookImage}
+        coverImage="Entrepreneurship.png"
       />
     );
     expect(container).toMatchSnapshot();
@@ -26,7 +26,7 @@ describe("Testing Book View Molecule", () => {
         bookAuthor={"Jim Collins & Bill Lazier"}
         bookTitle="Beyond Entrepreneurship"
         bookDesc="Turning Your Business into an Enduring Great Company"
-        coverImage={BookImage}
+        coverImage="Entrepreneurship.png"
         onClick={handleClick}
       />
     );

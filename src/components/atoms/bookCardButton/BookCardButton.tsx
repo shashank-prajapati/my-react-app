@@ -1,15 +1,13 @@
 import { Button, ButtonProps } from "@mui/material";
 import React from "react";
 import ButtonAtom from "../button/ButtonAtom";
-import ButtonAton from "../button/ButtonAtom";
-
-interface Props extends ButtonProps {
+interface Props {
   btnText?: string;
   isHovered?: Boolean;
+  startIcon?: React.ReactNode
 }
-
 const BookCardButton = (props: Props) => {
-  const { btnText, startIcon, isHovered } = props;
+  const { btnText, startIcon, isHovered} = props;
   let backgroundColor = "white";
   let textColor = "secondary.main";
   if (isHovered) {
@@ -33,5 +31,4 @@ const BookCardButton = (props: Props) => {
     </div>
   );
 };
-
 export default BookCardButton;

@@ -5,6 +5,7 @@ import { ButtonProps } from "@mui/material";
 import Box from "@mui/material/Box";
 import Image from "../../atoms/image/Image";
 
+
 interface Props extends ButtonProps {
   coverImage: string;
   bookTitle: string;
@@ -43,6 +44,7 @@ function BookCard(props: Props) {
           borderRadius: "8px",
           pb: paddingBottom,
         }}
+        data-testid="Card"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         onClick={() => handleClick && handleClick(index - 1)}

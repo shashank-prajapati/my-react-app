@@ -7,12 +7,12 @@ import { ReactComponent as CommunicationSkills } from "../../../media/Communicat
 import { ReactComponent as CorporateCulture } from "../../../media/Corporate Culture.svg";
 import { ReactComponent as Economics } from "../../../media/Economics.svg";
 import { ReactComponent as Education } from "../../../media/Education.svg";
-import { ReactComponent as HealthNutrition } from "../../../media/Health & Nutrition.svg";
+import { ReactComponent as HealthNutrition } from "../../../media/Health Nutrition.svg";
 import { ReactComponent as History } from "../../../media/History.svg";
-import { ReactComponent as MarketingSales } from "../../../media/Marketing & Sales.svg";
-import { ReactComponent as MoneyInvestments } from "../../../media/Money & Investments.svg";
-import { ReactComponent as Motivation } from "../../../media/Motivation & Inspiration.svg";
-import { ReactComponent as Nature } from "../../../media/Nature & Environment.svg";
+import { ReactComponent as MarketingSales } from "../../../media/Marketing Sales.svg";
+import { ReactComponent as MoneyInvestments } from "../../../media/Money Investments.svg";
+import { ReactComponent as Motivation } from "../../../media/Motivation Inspiration.svg";
+import { ReactComponent as Nature } from "../../../media/Nature Environment.svg";
 import { ReactComponent as PersonalDevelopment } from "../../../media/Personal Development.svg";
 import { ReactComponent as Politics } from "../../../media/Politics.svg";
 import { ReactComponent as Productivity } from "../../../media/Productivity.svg";
@@ -133,21 +133,19 @@ const menuData = [
 ];
 
 
-type Props = {};
+type Props = {
+  onClick?:any;
+};
 
-function ExploreMenu({}: Props) {
-  const navigate = useNavigate();
-  const openPage = (catName:string) => {
-    let path = "/explore-books/"+catName;
-    navigate(path);
-  };
+function ExploreMenu(props: Props) {
+  const {onClick} = props;
   const menuList = menuData.map((menuItem) => (
     <Grid item xs={4}>
       <ExploreMenuButton
         key={menuItem.id}
         iconComponent={menuItem.iconComponent}
         buttonText={menuItem.buttonText}
-        onClick={()=>openPage(menuItem.path)}
+        onClick={()=>onClick(menuItem.path)}
       />
     </Grid>
   ));

@@ -7,11 +7,6 @@ export default {
   component: AccountAvatar,
 } as ComponentMeta<typeof AccountAvatar>;
 
-const Template: ComponentStory<typeof AccountAvatar> = (args) => <AccountAvatar {...args}/>;
+const Template: ComponentStory<typeof AccountAvatar> = (args) => <AccountAvatar initials='A' />;
 
 export const Primary = Template.bind({});
-
-Primary.args = {
-    width:'124px',
-    height:'26px'
-}

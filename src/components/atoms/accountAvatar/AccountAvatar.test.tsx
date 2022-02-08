@@ -4,7 +4,7 @@ import AccountAvatar from './AccountAvatar';
 
 describe('Testing Account Avatar', ()=>{
     it('should match the default snapshot',()=>{
-        const {container} = render(<AccountAvatar/>,);
+        const {container} = render(<AccountAvatar initials='A'/>,);
         expect(container).toMatchSnapshot();
     })
 })

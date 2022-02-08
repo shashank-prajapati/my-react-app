@@ -44,10 +44,42 @@ describe("Testing Book Card", () => {
         isButtoned={true}
         btnText="Add to library"
         index={0}
-        onClick={handleClick}
+        handleClick={handleClick}
       ></BookCard>
     );
-    fireEvent.click(screen.getByText("Add to library"));
+    fireEvent.click(screen.getByTestId("Card"));
     expect(handleClick).toHaveBeenCalled();
+  });
+
+  it("should mouseEnter Snapshot", () => {
+    const { container } = render(
+      <BookCard
+        coverImage={coverImage}
+        time="13"
+        bookAuthor={`Jim Collins & Bill Lazier`}
+        bookTitle="Beyond Entrepreneurship"
+        isButtoned={true}
+        btnText="Add to library"
+        index={0}
+      ></BookCard>
+    );
+    fireEvent.mouseEnter(screen.getByText("Add to library"));
+    expect(container).toMatchSnapshot();
+  });
+
+  it("should mouseLeave Snapshot", () => {
+    const { container } = render(
+      <BookCard
+        coverImage={coverImage}
+        time="13"
+        bookAuthor={`Jim Collins & Bill Lazier`}
+        bookTitle="Beyond Entrepreneurship"
+        isButtoned={true}
+        btnText="Add to library"
+        index={0}
+      ></BookCard>
+    );
+    fireEvent.mouseLeave(screen.getByText("Add to library"));
+    expect(container).toMatchSnapshot();
   });
 });

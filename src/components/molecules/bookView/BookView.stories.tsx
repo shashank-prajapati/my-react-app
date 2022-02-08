@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import BookImage from '../../../media/coverImage.png';
+import BookImage from "../../../media/cover_image/Boss.png";
 import BookView from "./BookView";
 
 export default {
@@ -14,12 +14,11 @@ const Template: ComponentStory<typeof BookView> = (args) => (
 );
 
 export const BeyondEntrepreneurship = Template.bind({});
-export const Buttoned = Template.bind({});
 
 BeyondEntrepreneurship.args = {
   time: "13",
   bookAuthor: "Jim Collins & Bill Lazier",
   bookTitle: "Beyond Entrepreneurship",
   bookDesc: "Turning Your Business into an Enduring Great Company",
-  coverImage:BookImage
+  coverImage: "Entrepreneurship.png",
 };

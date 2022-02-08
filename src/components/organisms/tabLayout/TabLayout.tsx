@@ -29,7 +29,7 @@ interface Props extends BoxProps {
 export default function TabLayout(props: Props) {
   const { sx, booksData } = props;
   const [value, setValue] = React.useState(0);
-  const [render,setRender] = React.useState(false);
+  const [render, setRender] = React.useState(false);
 
   const currentlyReadingBooks = booksData.filter((book) => {
     return !book.isFinished;
@@ -43,10 +43,10 @@ export default function TabLayout(props: Props) {
     setValue(newValue);
   };
 
-  const cardButtonClick = (id:number)=>{
-    booksData[id].isFinished=!booksData[id].isFinished;
+  const cardButtonClick = (id: number) => {
+    booksData[id].isFinished = !booksData[id].isFinished;
     setRender(!render);
-  }
+  };
 
   return (
     <Box sx={{ width: "100%", ...sx }}>
@@ -61,7 +61,7 @@ export default function TabLayout(props: Props) {
               p: 0,
               textTransform: "none",
               width: "300px",
-              fontWeight:'bold'
+              fontWeight: "bold",
             },
           }}
         >
@@ -70,10 +70,16 @@ export default function TabLayout(props: Props) {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <BookGrid booksData={currentlyReadingBooks} cardButtonClick={cardButtonClick} />
+        <BookGrid
+          booksData={currentlyReadingBooks}
+          cardButtonClick={cardButtonClick}
+        />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <BookGrid booksData={finishedReadingBooks} cardButtonClick={cardButtonClick}/>
+        <BookGrid
+          booksData={finishedReadingBooks}
+          cardButtonClick={cardButtonClick}
+        />
       </TabPanel>
     </Box>
   );

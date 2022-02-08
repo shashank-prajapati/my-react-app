@@ -1,5 +1,5 @@
 import React from 'react';
-import ExploreMenuIcons from '../../atoms/exploreMenuIcons/ExploreMenuIcons';
+import Icon from '../../atoms/icon/Icon';
 import {ReactComponent as EntrepreneurshipIcon} from '../../../media/Vector.svg';
 import { Box, Typography } from '@mui/material';
 
@@ -22,7 +22,7 @@ function ExploreMenuButton(props: Props) {
       '&:hover':{
         cursor: 'pointer',
       }}}>
-      <ExploreMenuIcons iconComponent={iconComponent}/>
+      <Icon iconComponent={iconComponent}/>
       <Typography variant='body2' color='extraTextColor.main' sx={{ml:1}}>{buttonText}</Typography>
   </Box>
   </div>;

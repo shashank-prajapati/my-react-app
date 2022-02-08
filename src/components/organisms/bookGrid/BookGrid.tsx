@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Grid } from "@mui/material";
 import BookCard from "../../molecules/bookCard/BookCard";
+import { useAuth0 } from "@auth0/auth0-react";
 
 interface bookData {
   id: number;
@@ -18,12 +19,14 @@ type Props = {
 
 function BookGrid(props: Props) {
   const { booksData, cardButtonClick } = props;
+  const { isAuthenticated } = useAuth0();
 
   const booksGridItems = booksData.map((book) => {
     let buttonText = "Finish Reading";
     if (book.isFinished) {
       buttonText = "Read Again";
     }
+
     return (
       <Grid item xs={4} display="flex" justifyContent="center">
         <BookCard
