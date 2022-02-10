@@ -5,7 +5,6 @@ import { ButtonProps } from "@mui/material";
 import Box from "@mui/material/Box";
 import Image from "../../atoms/image/Image";
 
-
 interface Props extends ButtonProps {
   coverImage: string;
   bookTitle: string;
@@ -29,11 +28,7 @@ function BookCard(props: Props) {
     index,
     handleClick,
   } = props;
-  let paddingBottom = 0;
   const [isHovered, setHovered] = useState(false);
-  if (!isButtoned) {
-    paddingBottom = 4;
-  }
 
   return (
     <div>
@@ -42,7 +37,7 @@ function BookCard(props: Props) {
           width: "19.7vw",
           backgroundColor: "secondary_100.main",
           borderRadius: "8px",
-          pb: paddingBottom,
+          pb: !isButtoned ? 4 : 0,
         }}
         data-testid="Card"
         onMouseEnter={() => setHovered(true)}

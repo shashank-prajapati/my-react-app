@@ -10,11 +10,13 @@ const Image = (props: Props) => {
   const { source, imgHeight, imgWidth } = props;
   return (
     <img
-      style={{ display: "block", width:imgWidth ?? "inherit" , height:imgHeight ?? "inherit" }}
+      style={{
+        display: "block",
+      }}
       src={source}
-      //height={height ?? "inherit"}
+      height={imgHeight ?? "inherit"}
       alt="Book"
-      //width={width ?? "inherit"}
+      width={imgWidth ?? "inherit"}
     ></img>
   );
 };

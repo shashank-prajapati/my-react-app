@@ -26,126 +26,125 @@ const menuData = [
     id: 1,
     iconComponent: EntrepreneurshipIcon,
     buttonText: "Entrepreneurship",
-    path: 'entrepreneurship'
+    path: "entrepreneurship",
   },
   {
     id: 2,
     iconComponent: Politics,
     buttonText: "Politics",
-    path: 'politics'
+    path: "politics",
   },
   {
     id: 3,
     iconComponent: MarketingSales,
     buttonText: "Marketing & Sales",
-    path: 'marketing-sales'
+    path: "marketing-sales",
   },
   {
     id: 4,
     iconComponent: Science,
     buttonText: "Science",
-    path:'science'
+    path: "science",
   },
   {
     id: 5,
     iconComponent: HealthNutrition,
     buttonText: "Health & Nutrition",
-    path: 'health-nutrition'
+    path: "health-nutrition",
   },
   {
     id: 6,
     iconComponent: PersonalDevelopment,
     buttonText: "Personal Development",
-    path: 'personal-development'
+    path: "personal-development",
   },
   {
     id: 7,
     iconComponent: Economics,
     buttonText: "Economics",
-    path: 'economics'
+    path: "economics",
   },
   {
     id: 8,
     iconComponent: History,
     buttonText: "History",
-    path: 'history'
+    path: "history",
   },
   {
     id: 9,
     iconComponent: CommunicationSkills,
     buttonText: "Communication Skills",
-    path: 'communication-skills'
+    path: "communication-skills",
   },
   {
     id: 10,
     iconComponent: CorporateCulture,
     buttonText: "CorporateCulture",
-    path: 'corporate-culture'
+    path: "corporate-culture",
   },
   {
     id: 11,
     iconComponent: Motivation,
     buttonText: "Motivation & Inspiration",
-    path: 'motivation-inspiration'
+    path: "motivation-inspiration",
   },
   {
     id: 12,
     iconComponent: MoneyInvestments,
     buttonText: "Money & Investments",
-    path: 'money-investments'
+    path: "money-investments",
   },
   {
     id: 13,
     iconComponent: Psycology,
     buttonText: "Psychology",
-    path: 'psychology'
+    path: "psychology",
   },
   {
     id: 14,
     iconComponent: Productivity,
     buttonText: "Productivity",
-    path: 'productivity'
+    path: "productivity",
   },
   {
     id: 15,
     iconComponent: Relationship,
     buttonText: "Sex & Relationship",
-    path: 'sex-relationship'
+    path: "sex-relationship",
   },
   {
     id: 16,
     iconComponent: Nature,
     buttonText: "Nature & Environment",
-    path: 'nature-environment'
+    path: "nature-environment",
   },
   {
     id: 17,
     iconComponent: CareerSuccess,
     buttonText: "Career & Success",
-    path: 'career-success'
+    path: "career-success",
   },
   {
     id: 18,
     iconComponent: Education,
     buttonText: "Education",
-    path: 'education'
+    path: "education",
   },
 ];
 
-
 type Props = {
-  onClick?:any;
+  onClick?: any;
 };
 
 function ExploreMenu(props: Props) {
-  const {onClick} = props;
+  const { onClick } = props;
   const menuList = menuData.map((menuItem) => (
     <Grid item xs={4}>
       <ExploreMenuButton
         key={menuItem.id}
         iconComponent={menuItem.iconComponent}
         buttonText={menuItem.buttonText}
-        onClick={()=>onClick(menuItem.path)}
+        onClick={() => onClick(menuItem.path)}
       />
     </Grid>
   ));

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { render, fireEvent ,screen} from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import BookCardButton from "./BookCardButton";
 
 describe("Testing Book Card Button", () => {
@@ -9,9 +9,9 @@ describe("Testing Book Card Button", () => {
   });
 
   it("should match the dhover snapshot", () => {
-    const { container } = render(<BookCardButton btnText="Add to library" isHovered={true}/>);
+    const { container } = render(
+      <BookCardButton btnText="Add to library" isHovered={true} />
+    );
     expect(container).toMatchSnapshot();
   });
 });
-
-

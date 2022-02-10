@@ -69,5 +69,13 @@
     "@storybook/react": "^6.4.13",
     "@testing-library/react": "^12.1.2",
     "webpack": "^5.66.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/components/atoms/**/*.{ts,tsx}",
+      "src/components/molecules/**/*.{ts,tsx}",
+      "src/components/organisms/**/*.{ts,tsx}",
+      "!src/**/*.stories.{ts,tsx}"
+    ]
   }
 }

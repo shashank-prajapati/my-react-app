@@ -31,7 +31,12 @@ function AvatarButton(props: Props) {
           <AccountAvatar initials={userName ? userName[0] : "A"} />
         )}
         {isAuthenticated && (
-          <Icon iconComponent={ExpandMoreIcon} width="11px" height="6px" ml={1} />
+          <Icon
+            iconComponent={ExpandMoreIcon}
+            width="11px"
+            height="6px"
+            ml={1}
+          />
         )}
       </Box>
     </div>

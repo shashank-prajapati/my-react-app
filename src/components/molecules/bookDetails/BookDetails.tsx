@@ -42,7 +42,7 @@ function BookDetails(props: Props) {
           borderLeft: 1,
           borderRight: 1,
           borderColor: "secondary_100.main",
-          bgcolor: backgroundColor,
+          bgcolor: isHovered ? "footerBgColor.main" : "white",
           mt: 0,
         }}
       >

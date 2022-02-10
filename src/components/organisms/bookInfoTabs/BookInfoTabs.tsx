@@ -39,7 +39,7 @@ function BookInfoTabs(props: BoxProps) {
               "&.Mui-selected": {
                 color: "navTextColors.main",
               },
-              fontWeight:'bold'
+              fontWeight: "bold",
             },
           }}
         >

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { render, fireEvent ,screen} from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import ButtonAtom from "./ButtonAtom";
 
 describe("Testing Account Avatar", () => {
@@ -8,26 +8,26 @@ describe("Testing Account Avatar", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("should match the outlined button",()=>{
-      const {container} = render(<ButtonAtom variant="outlined">Click Here</ButtonAtom>);
-      expect(container).toMatchSnapshot();
+  it("should match the outlined button", () => {
+    const { container } = render(
+      <ButtonAtom variant="outlined">Click Here</ButtonAtom>
+    );
+    expect(container).toMatchSnapshot();
   });
 
-  it("should match text snapshot",()=>{
-      const {container} =  render(<ButtonAtom variant="text">Click Here</ButtonAtom>);
-      expect(container).toMatchSnapshot();
-  })
+  it("should match text snapshot", () => {
+    const { container } = render(
+      <ButtonAtom variant="text">Click Here</ButtonAtom>
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  it('should call on click method of button', () => {
+  it("should call on click method of button", () => {
     const handleClick = jest.fn();
     const { container } = render(
-      <ButtonAtom
-        onClick={handleClick}
-      >Click Here</ButtonAtom>,
+      <ButtonAtom onClick={handleClick}>Click Here</ButtonAtom>
     );
-    fireEvent.click(screen.getByText('Click Here'));
+    fireEvent.click(screen.getByText("Click Here"));
     expect(handleClick).toHaveBeenCalled();
   });
 });
-
-

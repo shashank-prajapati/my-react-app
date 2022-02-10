@@ -9,5 +9,9 @@ describe('Testing ImageAtom', ()=>{
         const {container} = render(<AvatarButton isAuthenticated={true}/>,);
         expect(container).toMatchSnapshot();
     })
+    it('should match the Avatar with initial Snapshot',()=>{
+        const {container} = render(<AvatarButton isAuthenticated={true} userName='Shashank'/>,);
+        expect(container).toMatchSnapshot();
+    })
 })
 

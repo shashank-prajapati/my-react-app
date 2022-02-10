@@ -20,7 +20,7 @@ TextButton.args = {
   children: "Add to library",
 };
 
-IconButton.args={
-    children:"Add to library",
-    startIcon:<AddIcon/>
-}
+IconButton.args = {
+  children: "Add to library",
+  startIcon: <AddIcon />,
+};

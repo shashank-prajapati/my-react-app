@@ -22,8 +22,8 @@ const LandingPage = () => {
   const { isAuthenticated } = useAuth0();
 
   const navigate = useNavigate();
-  const openPage = (catName:string) => {
-    let path = "/explore-books/"+catName;
+  const openPage = (catName: string) => {
+    let path = "/explore-books/" + catName;
     navigate(path);
   };
 
@@ -44,7 +44,10 @@ const LandingPage = () => {
 
   return (
     <div>
-      <HeaderWithBackDrop onExploreMenuClick={openPage} gotoMyLibrary={gotoMyLibrary} >
+      <HeaderWithBackDrop
+        onExploreMenuClick={openPage}
+        gotoMyLibrary={gotoMyLibrary}
+      >
         <Box sx={{ mx: 0, px: "250px" }}>
           <Typography
             sx={{ mt: 15 }}

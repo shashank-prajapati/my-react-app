@@ -15,7 +15,7 @@ type Props = {
 };
 
 function HeaderWithBackDrop(props: Props) {
-  const { children, onExploreMenuClick,gotoMyLibrary } = props;
+  const { children, onExploreMenuClick, gotoMyLibrary } = props;
 
   const [open, setOpen] = React.useState(false);
   const [icon, setIcon] = React.useState(
@@ -65,12 +65,16 @@ function HeaderWithBackDrop(props: Props) {
 
   return (
     <div>
-      <Header btnClick={handleOpen} btnIcon={icon} gotoMyLibrary={gotoMyLibrary}/>
+      <Header
+        btnClick={handleOpen}
+        btnIcon={icon}
+        gotoMyLibrary={gotoMyLibrary}
+      />
       <Box id="content" sx={{ position: "relative", height: "100vh" }}>
         <Backdrop
           sx={{
             position: "absolute",
-            color: "#fff",
+            color: "backDropColor.main",
             zIndex: (theme) => theme.zIndex.drawer + 1,
             height: "100vh",
           }}

@@ -20,8 +20,8 @@ const BookDetailsPage = () => {
   const [data, setData] = useState<bookProps>(bookDetails);
 
   const navigate = useNavigate();
-  const openPage = (catName:string) => {
-    let path = "/explore-books/"+catName;
+  const openPage = (catName: string) => {
+    let path = "/explore-books/" + catName;
     navigate(path);
   };
 
@@ -58,7 +58,10 @@ const BookDetailsPage = () => {
 
   return (
     <div>
-      <HeaderWithBackDrop onExploreMenuClick={openPage} gotoMyLibrary={gotoMyLibrary}>
+      <HeaderWithBackDrop
+        onExploreMenuClick={openPage}
+        gotoMyLibrary={gotoMyLibrary}
+      >
         <Box sx={{ px: 62.5 }}>
           <Typography pb={10} variant="body2" color="navTextColors.main">
             Get the key ideas from

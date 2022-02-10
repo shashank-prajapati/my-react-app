@@ -31,8 +31,8 @@ const EntrepreneurshipBooks = ({}: Props) => {
   const [audioBlinkz, setAudioBlinkz] = useState<Array<bookProps>>([]);
 
   const navigate = useNavigate();
-  const openPage = (catName:string) => {
-    let path = "/explore-books/"+catName;
+  const openPage = (catName: string) => {
+    let path = "/explore-books/" + catName;
     navigate(path);
   };
 
@@ -40,10 +40,10 @@ const EntrepreneurshipBooks = ({}: Props) => {
     navigate("/");
   };
 
-  const gotoBookPage = ()=>{
+  const gotoBookPage = () => {
     let path = "/book/beyond-entrepreneurship-2.0";
     navigate(path);
-  }
+  };
 
   useEffect(() => {
     fetch("http://localhost:3000/trendingBlinkz/")
@@ -65,7 +65,10 @@ const EntrepreneurshipBooks = ({}: Props) => {
 
   return (
     <div>
-      <HeaderWithBackDrop onExploreMenuClick={openPage} gotoMyLibrary={gotoMyLibrary}>
+      <HeaderWithBackDrop
+        onExploreMenuClick={openPage}
+        gotoMyLibrary={gotoMyLibrary}
+      >
         <Box sx={{ px: 60 }}>
           <ExploreBookBanner />
           <Box sx={{ mt: 14 }}>
@@ -78,7 +81,7 @@ const EntrepreneurshipBooks = ({}: Props) => {
           >
             Trending blinks
           </Typography>
-          <AddBookGrid gridData={trendingBlinkz} handleClick={gotoBookPage}/>
+          <AddBookGrid gridData={trendingBlinkz} handleClick={gotoBookPage} />
           <Typography
             sx={{ mt: 20, mb: 6 }}
             variant="h3"

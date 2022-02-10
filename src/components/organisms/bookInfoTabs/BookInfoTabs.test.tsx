@@ -4,7 +4,7 @@ import BookInfoTabs from "./BookInfoTabs";
 
 describe("Testing Book Info Tabs", () => {
   it("should match the Book Info Tabs snapshot", () => {
-    const { container } = render(<BookInfoTabs/>);
+    const { container } = render(<BookInfoTabs />);
     expect(container).toMatchSnapshot();
   });
 });

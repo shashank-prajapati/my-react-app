@@ -6,14 +6,16 @@ import BookImage from "../../../media/coverImage.png";
 import { ReactComponent as EntrepreneurshipIcon } from "../../../media/Vector.svg";
 
 describe("Testing Footer List", () => {
-    const list1 = [
-        "Book lists",
-        "What is Nonfiction?",
-        "What to read next?",
-        "Benefits of reading",
-      ];
+  const list1 = [
+    "Book lists",
+    "What is Nonfiction?",
+    "What to read next?",
+    "Benefits of reading",
+  ];
   it("should match the Footer List snapshot", () => {
-    const { container } = render(<FooterList list={list1} heading="Editorial" />);
+    const { container } = render(
+      <FooterList list={list1} heading="Editorial" />
+    );
     expect(container).toMatchSnapshot();
   });
 });

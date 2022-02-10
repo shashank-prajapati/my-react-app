@@ -4,10 +4,10 @@ import ButtonAtom from "../button/ButtonAtom";
 interface Props {
   btnText?: string;
   isHovered?: Boolean;
-  startIcon?: React.ReactNode
+  startIcon?: React.ReactNode;
 }
 const BookCardButton = (props: Props) => {
-  const { btnText, startIcon, isHovered} = props;
+  const { btnText, startIcon, isHovered } = props;
   let backgroundColor = "white";
   let textColor = "secondary.main";
   if (isHovered) {

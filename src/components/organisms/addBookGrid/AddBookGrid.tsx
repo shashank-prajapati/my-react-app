@@ -14,12 +14,11 @@ export type bookProps = {
 
 type Props = {
   gridData: Array<bookProps>;
-  handleClick?:any;
+  handleClick?: any;
 };
 
-
 function AddBookGrid(props: Props) {
-  const { gridData ,handleClick} = props;
+  const { gridData, handleClick } = props;
 
   const gridItems = gridData.map((book) => (
     <Grid item>

@@ -1,13 +1,12 @@
-import * as React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import {ReactComponent as EntrepreneurshipIcon} from '../../../media/Vector.svg';
+import * as React from "react";
+import { render, fireEvent } from "@testing-library/react";
+import { ReactComponent as EntrepreneurshipIcon } from "../../../media/Vector.svg";
 
-import Icon from './Icon';
+import Icon from "./Icon";
 
-describe('Testing Icon Atom', ()=>{
-    it('should match the default snapshot',()=>{
-        const {container} = render(<Icon iconComponent={EntrepreneurshipIcon}/>,);
-        expect(container).toMatchSnapshot();
-    })
-})
-
+describe("Testing Icon Atom", () => {
+  it("should match the default snapshot", () => {
+    const { container } = render(<Icon iconComponent={EntrepreneurshipIcon} />);
+    expect(container).toMatchSnapshot();
+  });
+});

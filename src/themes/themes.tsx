@@ -106,6 +106,12 @@ export const theme = createTheme({
     footerBgColor: {
       main: "#F1F6F4",
     },
+    purple_100:{
+      main:'#69A6E3'
+    },
+    backDropColor:{
+      main:'#fff'
+    },
     contrastThreshold: 3,
     tonalOffset: 0.2,
   },
@@ -171,6 +177,8 @@ declare module "@mui/material/styles" {
     searchPlaceholder: Palette["primary"];
     websiteBgColor: Palette["primary"];
     footerBgColor: Palette["primary"];
+    purple_100:Palette["primary"];
+    backDropColor:Palette["primary"];
   }
   interface PaletteOptions {
     primaryBtn?: PaletteOptions["primary"];
@@ -188,6 +196,8 @@ declare module "@mui/material/styles" {
     searchPlaceholder?: PaletteOptions["primary"];
     websiteBgColor?: PaletteOptions["primary"];
     footerBgColor?: PaletteOptions["primary"];
+    purple_100?:PaletteOptions["primary"];
+    backDropColor?:PaletteOptions["primary"];
   }
 }
 
@@ -208,5 +218,7 @@ declare module "@mui/material/Button" {
     searchPlaceholder: true;
     websiteBgColor: true;
     footerBgColor: true;
+    purple_100:true;
+    backDropColor:true;
   }
 }
