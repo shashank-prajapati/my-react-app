@@ -4,7 +4,7 @@ exports[`Testing Account Avatar should match the default snapshot 1`] = `
 <div>
   <div>
     <div
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-x4blui-MuiAvatar-root"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-30mkw0-MuiAvatar-root"
     >
       A
     </div>

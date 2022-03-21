@@ -11,8 +11,10 @@ exports[`Testing Header should match the Header snapshot 1`] = `
       >
         <img
           alt="Book"
+          height="26px"
           src="blinkistLogo.png"
-          style="display: block; width: 124px; height: 26px;"
+          style="display: block;"
+          width="124px"
         />
         <div>
           <button

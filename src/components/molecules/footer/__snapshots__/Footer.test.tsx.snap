@@ -13,8 +13,10 @@ exports[`Testing Footer should match the Footer snapshot 1`] = `
       >
         <img
           alt="Book"
+          height="24px"
           src="blinkistLogo.png"
-          style="display: block; width: 100px; height: 24px;"
+          style="display: block;"
+          width="100px"
         />
         <h6
           class="MuiTypography-root MuiTypography-subtitle1 css-1e76e2v-MuiTypography-root"

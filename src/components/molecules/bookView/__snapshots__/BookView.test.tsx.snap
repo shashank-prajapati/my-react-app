@@ -116,8 +116,10 @@ exports[`Testing Book View Molecule should match the Book View snapshot 1`] = `
       >
         <img
           alt="Book"
+          height="302px"
           src="/assets/cover_image/Entrepreneurship.png"
-          style="display: block; width: 302px; height: 302px;"
+          style="display: block;"
+          width="302px"
         />
       </div>
     </div>
