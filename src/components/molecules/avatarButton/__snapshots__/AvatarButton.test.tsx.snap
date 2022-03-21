@@ -8,7 +8,7 @@ exports[`Testing ImageAtom should match the Avatar with initial Snapshot 1`] = `
     >
       <div>
         <div
-          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-x4blui-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-30mkw0-MuiAvatar-root"
         >
           S
         </div>
@@ -33,7 +33,7 @@ exports[`Testing ImageAtom should match the default snapshot 1`] = `
     >
       <div>
         <div
-          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-x4blui-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-30mkw0-MuiAvatar-root"
         >
           A
         </div>

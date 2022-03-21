@@ -12,8 +12,10 @@ exports[`Testing Header with back drop should match the default snapshot 1`] = `
         >
           <img
             alt="Book"
+            height="26px"
             src="blinkistLogo.png"
-            style="display: block; width: 124px; height: 26px;"
+            style="display: block;"
+            width="124px"
           />
           <div>
             <button
@@ -88,7 +90,7 @@ exports[`Testing Header with back drop should match the default snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="MuiBackdrop-root css-1x0pli1-MuiBackdrop-root"
+        class="MuiBackdrop-root css-c7zf14-MuiBackdrop-root"
         style="opacity: 0; visibility: hidden;"
       >
         <div

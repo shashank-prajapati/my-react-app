@@ -29,7 +29,9 @@ exports[`Testing Explore Banner should match the Explore Banner snapshot 1`] = `
             <h6
               class="MuiTypography-root MuiTypography-subtitle2 css-1gwt0ci-MuiTypography-root"
             >
-              Everything you need to know about thriving on a shoestring budget, making your first million, and hiring right from the start.
+              Everything you need to know about thriving on a shoestring
+budget, making your first million, and hiring right from the
+start.
             </h6>
           </div>
         </div>
@@ -39,8 +41,10 @@ exports[`Testing Explore Banner should match the Explore Banner snapshot 1`] = `
       >
         <img
           alt="Book"
+          height="inherit"
           src="readingImage.png"
-          style="display: block; width: inherit; height: inherit;"
+          style="display: block;"
+          width="inherit"
         />
       </div>
     </div>

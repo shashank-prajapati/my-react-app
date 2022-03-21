@@ -9,8 +9,10 @@ exports[`Testing Book Card should match the Buttoned Book Card Snapshot 1`] = `
     >
       <img
         alt="Book"
+        height="100%"
         src="coverImage.png"
-        style="display: block; width: 100%; height: 100%;"
+        style="display: block;"
+        width="100%"
       />
       <div>
         <div
@@ -80,8 +82,10 @@ exports[`Testing Book Card should match the unButtoned Book Card Snapshot 1`] = 
     >
       <img
         alt="Book"
+        height="100%"
         src="coverImage.png"
-        style="display: block; width: 100%; height: 100%;"
+        style="display: block;"
+        width="100%"
       />
       <div>
         <div
@@ -147,8 +151,10 @@ exports[`Testing Book Card should mouseEnter Snapshot 1`] = `
     >
       <img
         alt="Book"
+        height="100%"
         src="coverImage.png"
-        style="display: block; width: 100%; height: 100%;"
+        style="display: block;"
+        width="100%"
       />
       <div>
         <div
@@ -218,8 +224,10 @@ exports[`Testing Book Card should mouseLeave Snapshot 1`] = `
     >
       <img
         alt="Book"
+        height="100%"
         src="coverImage.png"
-        style="display: block; width: 100%; height: 100%;"
+        style="display: block;"
+        width="100%"
       />
       <div>
         <div

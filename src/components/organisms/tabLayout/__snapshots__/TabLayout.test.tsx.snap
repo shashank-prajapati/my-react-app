@@ -78,8 +78,10 @@ exports[`Testing Tab Layout should match the Tab Layout snapshot 1`] = `
                 >
                   <img
                     alt="Book"
+                    height="100%"
                     src="/assets/cover_image/Boss.png"
-                    style="display: block; width: 100%; height: 100%;"
+                    style="display: block;"
+                    width="100%"
                   />
                   <div>
                     <div
@@ -148,8 +150,10 @@ exports[`Testing Tab Layout should match the Tab Layout snapshot 1`] = `
                 >
                   <img
                     alt="Book"
+                    height="100%"
                     src="/assets/cover_image/ETE.png"
-                    style="display: block; width: 100%; height: 100%;"
+                    style="display: block;"
+                    width="100%"
                   />
                   <div>
                     <div
@@ -218,8 +222,10 @@ exports[`Testing Tab Layout should match the Tab Layout snapshot 1`] = `
                 >
                   <img
                     alt="Book"
+                    height="100%"
                     src="/assets/cover_image/DHTA.png"
-                    style="display: block; width: 100%; height: 100%;"
+                    style="display: block;"
+                    width="100%"
                   />
                   <div>
                     <div
@@ -288,8 +294,10 @@ exports[`Testing Tab Layout should match the Tab Layout snapshot 1`] = `
                 >
                   <img
                     alt="Book"
+                    height="100%"
                     src="/assets/cover_image/FOF.png"
-                    style="display: block; width: 100%; height: 100%;"
+                    style="display: block;"
+                    width="100%"
                   />
                   <div>
                     <div
@@ -358,8 +366,10 @@ exports[`Testing Tab Layout should match the Tab Layout snapshot 1`] = `
                 >
                   <img
                     alt="Book"
+                    height="100%"
                     src="/assets/cover_image/LOS.png"
-                    style="display: block; width: 100%; height: 100%;"
+                    style="display: block;"
+                    width="100%"
                   />
                   <div>
                     <div
@@ -428,8 +438,10 @@ exports[`Testing Tab Layout should match the Tab Layout snapshot 1`] = `
                 >
                   <img
                     alt="Book"
+                    height="100%"
                     src="/assets/cover_image/LYB.png"
-                    style="display: block; width: 100%; height: 100%;"
+                    style="display: block;"
+                    width="100%"
                   />
                   <div>
                     <div
@@ -498,8 +510,10 @@ exports[`Testing Tab Layout should match the Tab Layout snapshot 1`] = `
                 >
                   <img
                     alt="Book"
+                    height="100%"
                     src="/assets/cover_image/TLC.png"
-                    style="display: block; width: 100%; height: 100%;"
+                    style="display: block;"
+                    width="100%"
                   />
                   <div>
                     <div
@@ -568,8 +582,10 @@ exports[`Testing Tab Layout should match the Tab Layout snapshot 1`] = `
                 >
                   <img
                     alt="Book"
+                    height="100%"
                     src="/assets/cover_image/EBFB.png"
-                    style="display: block; width: 100%; height: 100%;"
+                    style="display: block;"
+                    width="100%"
                   />
                   <div>
                     <div
@@ -638,8 +654,10 @@ exports[`Testing Tab Layout should match the Tab Layout snapshot 1`] = `
                 >
                   <img
                     alt="Book"
+                    height="100%"
                     src="/assets/cover_image/DropShipping.png"
-                    style="display: block; width: 100%; height: 100%;"
+                    style="display: block;"
+                    width="100%"
                   />
                   <div>
                     <div
