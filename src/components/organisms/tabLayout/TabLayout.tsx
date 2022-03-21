@@ -1,7 +1,6 @@
 import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
 import Box, { BoxProps } from "@mui/material/Box";
 import BookGrid from "../bookGrid/BookGrid";
 import TabPanel from "../../atoms/tabPanel/TabPanel";
@@ -13,7 +12,7 @@ function a11yProps(index: number) {
   };
 }
 
-export interface bookData {
+export interface BookData {
   id: number;
   coverImage: string;
   bookTitle: string;
@@ -23,7 +22,7 @@ export interface bookData {
 }
 
 interface Props extends BoxProps {
-  booksData: Array<bookData>;
+  booksData: Array<BookData>;
 }
 
 export default function TabLayout(props: Props) {

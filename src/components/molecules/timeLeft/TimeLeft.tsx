@@ -9,7 +9,7 @@ interface Props extends BoxProps {
 }
 
 function TimeLeft(props: Props) {
-  const { sx, time, ...rest } = props;
+  const { sx, time} = props;
   return (
     <div>
       <Box

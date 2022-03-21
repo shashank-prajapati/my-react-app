@@ -1,9 +1,8 @@
-import { Box, CircularProgress, Modal, Typography } from "@mui/material";
+import { Box } from "@mui/material"; 
 import Backdrop from "@mui/material/Backdrop";
-import React, { useEffect } from "react";
+import React from "react";
 import ExploreMenu from "../exploreMenu/ExploreMenu";
 import Header from "../header/Header";
-import TabLayout from "../tabLayout/TabLayout";
 import { ReactComponent as ExpandMoreIcon } from "../../../media/expandMore.svg";
 import { ReactComponent as ExpandLessIcon } from "../../../media/expandLess.svg";
 import Icon from "../../atoms/icon/Icon";

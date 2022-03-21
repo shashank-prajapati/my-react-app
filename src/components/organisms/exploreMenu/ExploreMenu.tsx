@@ -19,7 +19,6 @@ import { ReactComponent as Productivity } from "../../../media/Productivity.svg"
 import { ReactComponent as Relationship } from "../../../media/SexRelationship.svg";
 import { ReactComponent as Science } from "../../../media/Science.svg";
 import { ReactComponent as Psycology } from "../../../media/Psychology.svg";
-import { useNavigate } from "react-router-dom";
 
 const menuData = [
   {

@@ -1,9 +1,8 @@
-import { Button, ButtonProps } from "@mui/material";
 import React from "react";
 import ButtonAtom from "../button/ButtonAtom";
 interface Props {
   btnText?: string;
-  isHovered?: Boolean;
+  isHovered?: boolean;
   startIcon?: React.ReactNode;
 }
 const BookCardButton = (props: Props) => {

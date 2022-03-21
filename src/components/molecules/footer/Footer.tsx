@@ -5,7 +5,6 @@ import FooterList from "../footerList/FooterList";
 import Image from "../../atoms/image/Image";
 import BlinkistLogo from "../../../media/blinkistLogo.png";
 
-type Props = {};
 
 const list1 = [
   "Book lists",
@@ -22,7 +21,7 @@ const list2 = [
 ];
 const list3 = ["About", "Careers", "partners", "Code of Conduct"];
 
-function Footer({}: Props) {
+function Footer() {
   return (
     <Paper
       sx={{

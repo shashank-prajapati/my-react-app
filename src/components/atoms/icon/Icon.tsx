@@ -1,5 +1,5 @@
 import React from "react";
-import SvgIcon, { SvgIconProps } from "@mui/material/SvgIcon";
+import SvgIcon from "@mui/material/SvgIcon";
 interface Props {
   iconComponent: React.ElementType<any>;
   color?: string;

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import BlinkistLogo from "../../../media/blinkistLogo.png";
-import Box, { BoxProps } from "@mui/material/Box";
-import IconButton from "../../atoms/iconButton/IconButton";
+import Box from "@mui/material/Box";
+import IconButton from "../../atoms/iconButton/IconButtonAtom";
 import AvatarButton from "../../molecules/avatarButton/AvatarButton";
 import Image from "../../atoms/image/Image";
 import ButtonAtom from "../../atoms/button/ButtonAtom";

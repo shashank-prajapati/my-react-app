@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import BookDetails from "../bookDetails/BookDetails";
 import { ButtonProps } from "@mui/material";
-import Box from "@mui/material/Box";
 import Image from "../../atoms/image/Image";
 
 interface Props extends ButtonProps {
@@ -10,7 +9,7 @@ interface Props extends ButtonProps {
   bookTitle: string;
   bookAuthor: string;
   time: string;
-  isButtoned: Boolean;
+  isButtoned: boolean;
   btnText?: string;
   handleClick?: any;
   index: number;

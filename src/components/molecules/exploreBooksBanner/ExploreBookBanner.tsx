@@ -4,9 +4,8 @@ import Image from "../../atoms/image/Image";
 import ReadingImg from "../../../media/readingImage.png";
 import { message } from "./bannerMessage";
 
-type Props = {};
 
-const ExploreBookBanner = ({}: Props) => {
+const ExploreBookBanner = () => {
   return (
     <Paper
       sx={{

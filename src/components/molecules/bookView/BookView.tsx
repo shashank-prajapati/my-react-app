@@ -1,11 +1,11 @@
-import { Box, Button, Grid, Typography, ButtonProps } from "@mui/material";
+import { Box,Typography} from "@mui/material";
 import React from "react";
 import TimeLeft from "../timeLeft/TimeLeft";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Image from "../../atoms/image/Image";
 import ButtonAtom from "../../atoms/button/ButtonAtom";
 
-export interface bookProps {
+export interface BookProps {
   bookTitle: string;
   bookDesc: string;
   bookAuthor: string;
@@ -14,7 +14,7 @@ export interface bookProps {
   onClick?: any;
 }
 
-const BookView = (props: bookProps) => {
+const BookView = (props: BookProps) => {
   const { bookTitle, bookDesc, bookAuthor, time, coverImage, onClick } = props;
   return (
     <Box display="flex" flexDirection="row" justifyContent="space-between">

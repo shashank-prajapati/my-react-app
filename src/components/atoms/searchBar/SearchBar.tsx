@@ -2,12 +2,10 @@ import React from "react";
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import InputAdornment from "@mui/material/InputAdornment";
-import Input from "@mui/material/Input";
 import { theme } from "../../../themes/themes";
 
-type Props = {};
 
-const SearchBar = ({}: Props) => {
+const SearchBar = () => {
   return (
     <div>
       <TextField

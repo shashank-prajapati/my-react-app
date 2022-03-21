@@ -11,9 +11,9 @@ interface Props extends ButtonProps {
   time: string;
   bookTitle: string;
   bookAuthor: string;
-  isButtoned: Boolean;
+  isButtoned: boolean;
   btnText?: string;
-  isHovered: Boolean;
+  isHovered: boolean;
 }
 
 function BookDetails(props: Props) {
@@ -26,10 +26,6 @@ function BookDetails(props: Props) {
     startIcon,
     isHovered,
   } = props;
-  let backgroundColor = "white";
-  if (isHovered) {
-    backgroundColor = "footerBgColor.main";
-  }
   return (
     <div>
       <Box

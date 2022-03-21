@@ -1,6 +1,5 @@
 import React from "react";
 import Icon from "../../atoms/icon/Icon";
-import { ReactComponent as EntrepreneurshipIcon } from "../../../media/Vector.svg";
 import { Box, Typography } from "@mui/material";
 
 type Props = {

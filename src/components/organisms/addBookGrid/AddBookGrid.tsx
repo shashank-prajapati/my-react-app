@@ -1,8 +1,7 @@
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
 import BookCard from "../../molecules/bookCard/BookCard";
 import AddIcon from "@mui/icons-material/Add";
-import { useNavigate } from "react-router-dom";
 
 export type bookProps = {
   id: number;

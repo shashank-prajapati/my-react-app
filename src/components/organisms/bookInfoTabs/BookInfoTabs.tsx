@@ -3,10 +3,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box, { BoxProps } from "@mui/material/Box";
-import BookGrid from "../bookGrid/BookGrid";
 import TabPanel from "../../atoms/tabPanel/TabPanel";
-import { textAlign } from "@mui/system";
-import { theme } from "../../../themes/themes";
 
 function a11yProps(index: number) {
   return {

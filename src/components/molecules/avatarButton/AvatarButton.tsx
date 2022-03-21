@@ -1,9 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
 import AccountAvatar from "../../atoms/accountAvatar/AccountAvatar";
-import { Auth0Provider } from "@auth0/auth0-react";
-import { useAuth0 } from "@auth0/auth0-react";
-import ButtonAtom from "../../atoms/button/ButtonAtom";
 import { ReactComponent as ExpandMoreIcon } from "../../../media/expandMore.svg";
 import Icon from "../../atoms/icon/Icon";
 
