@@ -63,7 +63,7 @@ const BookDetailsPage = () => {
       >
         <Box sx={{ px: 62.5 }}>
           <Typography pb={10} variant="body2" color="navTextColors.main">
-            Get key ideas from
+            Get the key ideas from
           </Typography>
           <BookView
             bookTitle={data.bookAuthor}
