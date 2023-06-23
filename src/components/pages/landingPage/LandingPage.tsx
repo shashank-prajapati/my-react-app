@@ -13,12 +13,12 @@ import TLCCoverImage from "../../../media/cover_image/TLC.png";
 import EBFBCoverImage from "../../../media/cover_image/EBFB.png";
 import DropshippingCoverImage from "../../../media/cover_image/DropShipping.png";
 import EntrepreneurshipCI from "../../../media/cover_image/Entrepreneurship.png";
-import { bookData } from "../../organisms/tabLayout/TabLayout";
+import { BookData } from "../../organisms/tabLayout/TabLayout";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
-  const [data, setData] = useState<Array<bookData>>([]);
+  const [data, setData] = useState<Array<BookData>>([]);
   const { isAuthenticated } = useAuth0();
 
   const navigate = useNavigate();
