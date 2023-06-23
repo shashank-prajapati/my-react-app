@@ -1,7 +1,6 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import BookView from "../../molecules/bookView/BookView";
-import BookImage from "../../../media/coverImage.png";
 import HeaderWithBackDrop from "../../organisms/headerWithBackdrop/HeaderWithBackDrop";
 import BookInfoTabs from "../../organisms/bookInfoTabs/BookInfoTabs";
 import Footer from "../../molecules/footer/Footer";
