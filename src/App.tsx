@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 import LandingPage from './components/pages/landingPage/LandingPage';
 import EntrepreneurshipBooks from './components/pages/entrepreneurshipBooks/EntrepreneurshipBooks';
-import Header from '../src/components/organisms/header/Header'
 import BookDetailsPage from './components/pages/bookDetails/BookDetailsPage';
 
 function App() {
