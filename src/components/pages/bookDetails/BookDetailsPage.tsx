@@ -5,7 +5,7 @@ import BookImage from "../../../media/coverImage.png";
 import HeaderWithBackDrop from "../../organisms/headerWithBackdrop/HeaderWithBackDrop";
 import BookInfoTabs from "../../organisms/bookInfoTabs/BookInfoTabs";
 import Footer from "../../molecules/footer/Footer";
-import { bookProps } from "../../molecules/bookView/BookView";
+import { BookProps } from "../../molecules/bookView/BookView";
 import { useNavigate } from "react-router-dom";
 
 const bookDetails = {
@@ -17,7 +17,7 @@ const bookDetails = {
 };
 
 const BookDetailsPage = () => {
-  const [data, setData] = useState<bookProps>(bookDetails);
+  const [data, setData] = useState<BookProps>(bookDetails);
 
   const navigate = useNavigate();
   const openPage = (catName: string) => {
