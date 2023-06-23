@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import HeaderWithBackDrop from "../../organisms/headerWithBackdrop/HeaderWithBackDrop";
 import { theme } from "../../../themes/themes";
@@ -9,9 +9,8 @@ import Footer from "../../molecules/footer/Footer";
 import { bookProps } from "../../organisms/addBookGrid/AddBookGrid";
 import { useNavigate } from "react-router-dom";
 
-type Props = {};
 
-const EntrepreneurshipBooks = ({}: Props) => {
+const EntrepreneurshipBooks = () => {
   const [trendingBlinkz, setTrendingBlinkz] = useState<Array<bookProps>>([]);
   const [justAdded, setJustAdded] = useState<Array<bookProps>>([]);
   const [audioBlinkz, setAudioBlinkz] = useState<Array<bookProps>>([]);
