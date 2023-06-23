@@ -1,25 +1,11 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import Header from "../../organisms/header/Header";
 import HeaderWithBackDrop from "../../organisms/headerWithBackdrop/HeaderWithBackDrop";
-import BBCoverImage from "../../../media/cover_image/Boss.png";
-import ETECoverImage from "../../../media/cover_image/ETE.png";
-import DHTACoverImage from "../../../media/cover_image/DHTA.png";
-import FOFCoverImage from "../../../media/cover_image/FOF.png";
-import LOSCoverImage from "../../../media/cover_image/LOS.png";
-import LYBCoverImage from "../../../media/cover_image/LYB.png";
-import TLCCoverImage from "../../../media/cover_image/TLC.png";
-import EBFBCoverImage from "../../../media/cover_image/EBFB.png";
-import EntrepreneurshipCI from "../../../media/cover_image/Entrepreneurship.png";
-import BookCard from "../../molecules/bookCard/BookCard";
-import AddIcon from "@mui/icons-material/Add";
 import { theme } from "../../../themes/themes";
 import ExploreBookBanner from "../../molecules/exploreBooksBanner/ExploreBookBanner";
 import SearchBar from "../../atoms/searchBar/SearchBar";
 import AddBookGrid from "../../organisms/addBookGrid/AddBookGrid";
 import Footer from "../../molecules/footer/Footer";
-import Dropshipping from "../../../media/cover_image/DropShipping.png";
-import { Paper } from "@mui/material";
 import { bookProps } from "../../organisms/addBookGrid/AddBookGrid";
 import { useNavigate } from "react-router-dom";
 
